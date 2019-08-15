@@ -25,18 +25,12 @@ function down(){
 	    data :{"url":$('#url').val()},
 	    dataType : 'JSON',
 	    success : function(dto) {
-	           if (dto.stat == "suc") {
+	           /* if (dto.stat == "suc") {
 	        	   alert('suc');
 	           }else{
 	        	   alert('err');
-	           }
-	         /* jQuery("#ecommerceNooS").append("<option value='Wu'>无</option>");
-	        for(var i=0;i<dto.length;i++){
-
-	            jQuery("#ecommerceNooS").append("<option value='"+dto[i].code+"'>"+dto[i].name+"</option>");
-
-	        }
-	        $("#ecommerceNooS").select2("val","Wu"); */
+	           } */
+	    	alert('已加入下载任务列表，请稍候刷新页面查看下载结果');
 	    }});
 }
 

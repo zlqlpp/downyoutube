@@ -36,16 +36,32 @@ public class MUserController {
 		 
 		logger.info(url);
 		logger.debug(url);
-        try {
-        	Process pro = Runtime.getRuntime().exec("youtube-dl -o /usr/share/tomcat/webapps/downyoutube/video/%(title)s.%(ext)s "+url);
-            pro.waitFor();
-        } catch ( Exception e) {
-            e.printStackTrace();
-            retMap.put("stat", "err");
-        }
+ 
+		Thread thread = new Thread(new MusicImplements(url));
+		thread.start();
+ 
+
 		//request.setAttribute("userlist", "");
         retMap.put("stat", "suc");
 		return retMap;
 	}
  
 }
+
+
+class MusicImplements implements Runnable{  
+	private String durl = "";
+	public MusicImplements(String url) {
+		this.durl = url;
+	}
+	
+    public void run() {  
+        try {
+        	Process pro = Runtime.getRuntime().exec("youtube-dl -o /usr/share/tomcat/webapps/downyoutube/video/%(title)s.%(ext)s "+durl);
+            pro.waitFor();
+        } catch ( Exception e) {
+            e.printStackTrace();
+        }
+          
+    }  
+}  
