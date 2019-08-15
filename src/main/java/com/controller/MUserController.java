@@ -37,7 +37,7 @@ public class MUserController {
 		logger.info(url);
 		logger.debug(url);
         try {
-        	Process pro = Runtime.getRuntime().exec("youtube-dl -o '/usr/share/tomcat/webapps/downyoutube/video/%(title)s.%(ext)s' "+url);
+        	Process pro = Runtime.getRuntime().exec("youtube-dl -o /usr/share/tomcat/webapps/downyoutube/video/%(title)s.%(ext)s "+url);
             pro.waitFor();
         } catch ( Exception e) {
             e.printStackTrace();
