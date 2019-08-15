@@ -33,8 +33,9 @@ public class MUserController {
 		Map<String,Object> retMap = new HashMap<String,Object>();
 		
 		String url = request.getParameter("url");
-		System.out.println(url);
+		 
 		logger.info(url);
+		logger.debug(url);
         try {
         	Process pro = Runtime.getRuntime().exec("youtube-dl -o '/usr/share/tomcat/webapps/downyoutube/video/%(title)s.%(ext)s' "+url);
             pro.waitFor();
