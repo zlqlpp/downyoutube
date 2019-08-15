@@ -14,6 +14,35 @@
 <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
 <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
 <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+
+<script>
+
+function down(){
+	$.ajax({
+	    type : 'POST',
+	    url :'down.do',
+	    data :{"url":$('#url').val()},
+	    dataType : 'JSON',
+	    success : function(dto) {
+	           if (dto.stat == "suc") {
+	        	   alert('suc');
+	           }else{
+	        	   alert('err');
+	           }
+	         /* jQuery("#ecommerceNooS").append("<option value='Wu'>无</option>");
+	        for(var i=0;i<dto.length;i++){
+
+	            jQuery("#ecommerceNooS").append("<option value='"+dto[i].code+"'>"+dto[i].name+"</option>");
+
+	        }
+	        $("#ecommerceNooS").select2("val","Wu"); */
+	    }});
+}
+
+
+
+</script>
 </head>
 
 
@@ -28,9 +57,9 @@
 
 <div class="row">
    <div class="col-12"> 
-	  <form class="form-inline">
+	  <form class="form-inline"  >
 	    <input type="url" class="form-control" style="width:1000px" id="url" placeholder="复制要下载视频的地址到这里">
-	    <button type="submit" class="btn btn-primary">下载</button>
+	    <button type="button" class="btn btn-primary" onclick="down();">下载</button>
 	  </form>
 	</div>
 </div>
