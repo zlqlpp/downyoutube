@@ -19,12 +19,12 @@ public class MUserController {
 	public String listUser(HttpServletRequest request) {
 		
 		
-        try {
+        /*try {
         	Process pro = Runtime.getRuntime().exec("/root/douyu----------------------video3/killShowAndFfmpeg.sh");
             pro.waitFor();
         } catch ( Exception e) {
             e.printStackTrace();
-        }
+        }*/
 		request.setAttribute("userlist", "");
 		return "index";
 	}
