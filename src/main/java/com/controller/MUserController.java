@@ -11,14 +11,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-
+import org.apache.commons.logging.Log;            
+import org.apache.commons.logging.LogFactory;         
  
 
 @Controller
 @RequestMapping("/d")
 public class MUserController {
 
- 
+	Log logger = LogFactory.getLog(getClass());
 	
 	@RequestMapping(value="/index")
 	public String index(HttpServletRequest request) {
@@ -33,6 +34,7 @@ public class MUserController {
 		
 		String url = request.getParameter("url");
 		System.out.println(url);
+		logger.info(url);
         try {
         	Process pro = Runtime.getRuntime().exec("youtube-dl -o '/usr/share/tomcat/webapps/downyoutube/video/%(title)s.%(ext)s' "+url);
             pro.waitFor();
