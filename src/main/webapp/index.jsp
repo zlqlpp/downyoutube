@@ -47,14 +47,20 @@ function clean(){
     
 
 <div class="row">
-   <div class="col-12"> 
 	  <form id="d" class="form-inline"  action="getFileList.do">
+	  <div class="col-6">
 	    <input type="url" class="form-control" style="width:1000px" id="url" placeholder="复制要下载视频的地址到这里">
+	    </div>
+	    <div class="col-2">
 	    <button type="button" class="btn btn-primary" onclick="down();">下载</button>
+	    </div>
+	    <div class="col-2">
 	    <button type="submit" class="btn btn-primary"  >查看文件列表</button>
+	    </div>
+	    <div class="col-2">
 	    <button type="button" class="btn btn-primary"  onclick="clean();">清理</button>
+	    </div>
 	  </form>
-	</div>
 </div>
 <div class="row">
 	<div class="col-*-*" style="height: 100px"></div> 
