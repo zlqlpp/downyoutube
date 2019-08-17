@@ -32,17 +32,11 @@ public class MUserController {
 	@RequestMapping(value="/down",method = RequestMethod.POST)
 	public Map<String,Object> down(HttpServletRequest request) {
 		Map<String,Object> retMap = new HashMap<String,Object>();
-		
 		String url = request.getParameter("url");
-		 
 		logger.info(url);
 		logger.debug(url);
- 
 		Thread thread = new Thread(new MusicImplements(url));
 		thread.start();
- 
-
-		//request.setAttribute("userlist", "");
         retMap.put("stat", "suc");
 		return retMap;
 	}
@@ -53,9 +47,18 @@ public class MUserController {
 		
 		File file = new File("/usr/share/tomcat/webapps/downyoutube/video");
 		File[] files = file.listFiles();
-
 		request.setAttribute("files", files);
+		return "index";  
+	}
+	
+	@RequestMapping(value="/clean")
+	public String clean(HttpServletRequest request) {
 		
+		File file = new File("/usr/share/tomcat/webapps/downyoutube/video");
+		File[] files = file.listFiles();
+		for(int i=0;i<files.length;i++){
+			files[i].delete();
+		}
 		return "index";  
 	}
  

@@ -29,7 +29,10 @@ function down(){
 	    }});
 }
  
-
+function clean(){
+		$("#d").attr("action","clean");
+     	$("#d").submit();
+}
 </script>
 </head>
 
@@ -45,10 +48,11 @@ function down(){
 
 <div class="row">
    <div class="col-12"> 
-	  <form class="form-inline"  action="getFileList.do">
+	  <form id="d" class="form-inline"  action="getFileList.do">
 	    <input type="url" class="form-control" style="width:1000px" id="url" placeholder="复制要下载视频的地址到这里">
 	    <button type="button" class="btn btn-primary" onclick="down();">下载</button>
 	    <button type="submit" class="btn btn-primary"  >查看文件列表</button>
+	    <button type="button" class="btn btn-primary"  onclick="clean();">清理</button>
 	  </form>
 	</div>
 </div>
