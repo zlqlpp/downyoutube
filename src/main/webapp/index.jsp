@@ -47,7 +47,7 @@ function clean(){
     
 
 <div class="row">
-	  <form id="d" class="form-inline"  action="getFileList.do">
+	  <form id="d" class="form"  action="getFileList.do">
 	  <div class="col-6">
 	    <input type="url" class="form-control" style="width:auto" id="url" placeholder="复制要下载视频的地址到这里">
 	    </div>
