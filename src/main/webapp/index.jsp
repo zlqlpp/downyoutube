@@ -47,7 +47,7 @@ function clean(){
     
 
 <div class="row">
-	  <form id="d" class="form"  action="getFileList.do">
+	  <form id="d" class="form-inline"  action="getFileList.do">
 	  <div class="col-6">
 	    <input type="url" class="form-control" style="width:auto" id="url" placeholder="复制要下载视频的地址到这里">
 	    </div>
@@ -68,7 +68,7 @@ function clean(){
 <c:forEach items="${files}" var="f" varStatus="status">
 <div class="row">
 	<div class="col-4"> </div>
-  	<div class="col-4"><h3><a href="video/${f.name }">${f.name }</a></h3></div>
+  	<div class="col-4"><h3><a href="/downyoutube/video/${f.name }">${f.name }</a></h3></div>
   	<div class="col-4"> </div>
 </div>
 <hr/>
