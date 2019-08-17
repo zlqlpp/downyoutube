@@ -56,7 +56,7 @@ public class MUserController {
 
 		request.setAttribute("files", files);
 		
-		return "index"; 
+		return "index";  
 	}
  
 }

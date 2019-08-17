@@ -41,7 +41,7 @@ function down(){
 	<div class="col-*-*" style="height: 100px"></div> 
 </div>
  
- 
+    
 
 <div class="row">
    <div class="col-12"> 
