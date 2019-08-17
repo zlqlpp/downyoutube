@@ -49,7 +49,7 @@ function clean(){
 <div class="row">
 	  <form id="d" class="form-inline"  action="getFileList.do">
 	  <div class="col-6">
-	    <input type="url" class="form-control" style="width:1000px" id="url" placeholder="复制要下载视频的地址到这里">
+	    <input type="url" class="form-control" style="width:auto" id="url" placeholder="复制要下载视频的地址到这里">
 	    </div>
 	    <div class="col-2">
 	    <button type="button" class="btn btn-primary" onclick="down();">下载</button>
