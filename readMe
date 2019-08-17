@@ -8,7 +8,7 @@
   1.本脚本，以digitalocean.com(非广告)平台为便，创建VPS时选择  CENTOS7 作为os。
   2.执行 
       yum install wget -y;
-      wget  https://github.com/zlqlpp/downyoutube/blob/master/install.sh;
+      wget  https://raw.githubusercontent.com/zlqlpp/downyoutube/master/install.sh;
       chmod +x install.sh;
       bash -x install.sh;
      即可进行安装
