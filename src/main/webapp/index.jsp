@@ -30,7 +30,7 @@ function down(){
 }
  
 function clean(){
-		$("#d").attr("action","clean");
+		$("#d").attr("action","clean.do");
      	$("#d").submit();
 }
 </script>
