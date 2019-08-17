@@ -17,7 +17,7 @@
 
 
 <script>
-
+ 
 function down(){
 	$.ajax({
 	    type : 'POST',
@@ -25,16 +25,10 @@ function down(){
 	    data :{"url":$('#url').val()},
 	    dataType : 'JSON',
 	    success : function(dto) {
-	           /* if (dto.stat == "suc") {
-	        	   alert('suc');
-	           }else{
-	        	   alert('err');
-	           } */
 	    	alert('已加入下载任务列表，请稍候刷新页面查看下载结果');
 	    }});
 }
-
-
+ 
 
 </script>
 </head>
@@ -51,21 +45,23 @@ function down(){
 
 <div class="row">
    <div class="col-12"> 
-	  <form class="form-inline"  >
+	  <form class="form-inline"  action="getFileList.do">
 	    <input type="url" class="form-control" style="width:1000px" id="url" placeholder="复制要下载视频的地址到这里">
 	    <button type="button" class="btn btn-primary" onclick="down();">下载</button>
+	    <button type="submit" class="btn btn-primary"  >查看文件列表</button>
 	  </form>
 	</div>
 </div>
 <div class="row">
 	<div class="col-*-*" style="height: 100px"></div> 
 </div>
+<c:forEach items="${files}" var="f" varStatus="status">
 <div class="row">
 	<div class="col-4"> </div>
-  	<div class="col-4"><h3><a href="#">xxxxx.mp4</a></h3></div>
+  	<div class="col-4"><h3><a href="#">${f.name }</a></h3></div>
   	<div class="col-4"> </div>
 </div>
-
+</c:forEach>
 
 </div>
 

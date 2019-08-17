@@ -2,6 +2,7 @@ package com.controller;
 
 
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -45,8 +46,29 @@ public class MUserController {
         retMap.put("stat", "suc");
 		return retMap;
 	}
+	
+	@RequestMapping(value="/getFileList")
+	public String getFileList(HttpServletRequest request) {
+		
+		
+		File file = new File("/usr/share/tomcat/webapps/downyoutube/video");
+		File[] files = file.listFiles();
+
+		request.setAttribute("files", files);
+		
+		return "index";
+	}
  
 }
+
+
+
+
+
+
+
+
+
 
 
 class MusicImplements implements Runnable{  
