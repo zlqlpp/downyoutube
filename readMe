@@ -17,6 +17,6 @@
       
   4.更新项目
       yum install wget -y;
-     wget  https://github.com/zlqlpp/downyoutube/blob/master/update.sh;
+     wget  https://raw.githubusercontent.com/zlqlpp/downyoutube/master/update.sh;
       chmod +x update.sh;
       bash -x update.sh;
