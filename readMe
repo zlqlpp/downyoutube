@@ -1,0 +1,20 @@
+项目介绍：
+  可以生成一个网页，在页面的输入框中输入 youtube 的视频地址，
+  点击下载按钮，即开始下载任务。
+  点击查看文件按钮，即可列出已下载的文件的列表。
+  点击清理按钮，即可删除服务器上已下载的文件。
+  
+安装说明：
+  1.本脚本，以digitalocean.com(非广告)平台为便，创建VPS时选择  CENTOS7 作为os。
+  2.执行 
+      wget  https://github.com/zlqlpp/downyoutube/blob/master/install.sh;
+      chmod +x install.sh;
+      bash -x install.sh;
+     即可进行安装
+  3.安装完成后 输入  (把下边ip换成你vps的ip地址即可)
+      http://IP:8080/downyoutube/d/index.do
+      
+  4.更新项目
+     wget  https://github.com/zlqlpp/downyoutube/blob/master/update.sh;
+      chmod +x update.sh;
+      bash -x update.sh;
