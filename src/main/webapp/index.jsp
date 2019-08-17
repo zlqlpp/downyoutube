@@ -58,7 +58,7 @@ function down(){
 <c:forEach items="${files}" var="f" varStatus="status">
 <div class="row">
 	<div class="col-4"> </div>
-  	<div class="col-4"><h3><a href="${f.name }">${f.name }</a></h3></div>
+  	<div class="col-4"><h3><a href="video/${f.name }">${f.name }</a></h3></div>
   	<div class="col-4"> </div>
 </div>
 <hr/>
