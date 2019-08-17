@@ -82,8 +82,9 @@ class MusicImplements implements Runnable{
 	
     public void run() {  
         try {
-        	Process pro = Runtime.getRuntime().exec("youtube-dl -o /usr/share/tomcat/webapps/downyoutube/video/%(title)s-%(id)s.%(ext)s "+durl);
-            pro.waitFor();
+//        	Process pro = Runtime.getRuntime().exec("youtube-dl -o /usr/share/tomcat/webapps/downyoutube/video/%(title)s-%(id)s.%(ext)s "+durl);
+        	Process pro = Runtime.getRuntime().exec("youtube-dl -o /usr/share/tomcat/webapps/downyoutube/video/-%(id)s.%(ext)s "+durl);
+        	pro.waitFor();
         } catch ( Exception e) {
             e.printStackTrace();
         }
